@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 27
+      author: cth
+      changes:
+        - sqlFile:
+            encoding: utf8
+            endDelimiter: \nGO
+            path: sql/insert_apparel_category_gender.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true

@@ -1,0 +1,18 @@
+databaseChangeLog:
+    - changeSet:
+          id: 14
+          author: cth
+          changes:
+              - createTable:
+                    tableName: user_role
+                    columns:
+                        - column:
+                              name: role
+                              type: varchar(255)
+                        - column:
+                              name: user_id
+                              type: bigint
+                              constraints:
+                                primaryKey: true
+                                foreignKeyName: fk_role_user
+                                references: user(id)

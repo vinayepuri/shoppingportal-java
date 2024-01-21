@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: cth
+      changes:
+        - createTable:
+            tableName: brand_category
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: brand_category_type
+                  type: varchar(255)
+              - column:
+                  name: description
+                  type: text

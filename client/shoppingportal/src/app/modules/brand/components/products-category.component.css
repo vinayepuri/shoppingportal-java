@@ -1,0 +1,32 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin-top: 70px;
+  width: 100%;  
+}
+
+.accordion{
+  margin: 50px 0;
+  font-size: 1rem;
+}
+
+.accordion-title{
+  font-size: 1rem;
+}
+
+.accordion-panel{
+  padding: 20px;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+

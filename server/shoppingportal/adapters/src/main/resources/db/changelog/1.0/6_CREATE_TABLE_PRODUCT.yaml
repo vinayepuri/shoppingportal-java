@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6
+      author: cth
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: varchar(255)
+              - column:
+                  name: unit_price
+                  type: decimal(19,2)
+              - column:
+                  name: image_url
+                  type: varchar(255)
+              - column:
+                  name: active
+                  type: boolean
+              - column:
+                  name: new
+                  type: boolean
+              - column:
+                  name: units_in_stock
+                  type: int
+              - column:
+                  name: gender_category_id
+                  type: int
+              - column:
+                  name: brand_category_id
+                  type: int
+              - column:
+                  name: apparel_category_id
+                  type: int

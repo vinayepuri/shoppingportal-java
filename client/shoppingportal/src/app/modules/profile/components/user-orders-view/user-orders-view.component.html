@@ -1,0 +1,44 @@
+<div class="global-container">
+  <div class="container table-container">
+    <table *ngIf="orders" class="table">
+      <thead>
+        <tr>          
+          <th scope="col" class="column-header">Commandé le</th> 
+          <th scope="col" class="column-header">Numéro de commande</th> 
+          <th scope="col" class="column-header">Détails de la commande</th>
+          <th scope="col" class="column-header">Prix total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td scope="row">{{order.date | date:'dd-MM-yyyy'}}</td>
+          <td scope="row">n° {{order.orderTrackingNumber}}</td>
+          <td>
+            <table class="inner-table">
+              <thead>
+                <tr>
+                  <th scope="col"  class="column-header">Produit</th>
+                  <th scope="col"  class="column-header">Prix unitaire</th>
+                  <th scope="col"  class="column-header">Quantité</th>
+                  <th scope="col"  class="column-header">Prix total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cartItem of order.orderItems; let j=index">
+                  <td class="column-data"><p>{{ cartItem.product.product_name }}</p>
+                  <img [src]=cartItem.product.image_url></td>
+                  <td class="column-data">{{ cartItem.product.unit_price | currency: 'EUR'}}</td>
+                  <td class="column-data">{{ cartItem.quantity }}</td>
+                  <td class="column-data">{{ cartItem.amount | currency: 'EUR'}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>         
+
+          <td>{{ order.totalPrice | currency:  'EUR'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

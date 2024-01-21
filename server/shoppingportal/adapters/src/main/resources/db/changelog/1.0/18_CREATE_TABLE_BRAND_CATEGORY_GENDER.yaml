@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 18
+      author: cth
+      changes:
+        - createTable:
+            tableName: brand_category_gender
+            columns:
+              - column:
+                  name: brand_category_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: fk_brand_category_gender_brand_category
+                    references: brand_category(id)
+              - column:
+                  name: gender_category_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: fk_brand_category_gender_gender_category
+                    references: gender_category(id)

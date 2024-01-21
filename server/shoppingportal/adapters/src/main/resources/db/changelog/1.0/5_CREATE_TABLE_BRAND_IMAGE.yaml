@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: cth
+      changes:
+        - createTable:
+            tableName: brand_image
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: image_url
+                  type: varchar(255)
+              - column:
+                  name: brand_category_id
+                  type: int
+              - column:
+                  name: gender_category_id
+                  type: int

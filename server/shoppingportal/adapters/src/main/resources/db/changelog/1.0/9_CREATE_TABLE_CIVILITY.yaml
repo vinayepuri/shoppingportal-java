@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9
+      author: cth
+      changes:
+        - createTable:
+            tableName: civility
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)

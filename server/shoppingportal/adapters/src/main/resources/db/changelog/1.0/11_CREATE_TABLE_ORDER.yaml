@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11
+      author: cth
+      changes:
+        - createTable:
+            tableName: order
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: order_tracking_number
+                  type: varchar(255)
+              - column:
+                  name: total_quantity
+                  type: int
+              - column:
+                  name: total_price
+                  type: decimal(19, 2)
+              - column:
+                  name: date_created
+                  type: timestamp
+              - column:
+                  name: address_id
+                  type: bigint
+              - column:
+                  name: user_id
+                  type: bigint

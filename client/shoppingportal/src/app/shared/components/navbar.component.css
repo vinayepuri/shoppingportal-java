@@ -1,0 +1,145 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display:block;
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 62.5%;
+  height: 50px;
+  width: 100%;
+  font-size: 62.5%;
+  color:#000;
+  background: hsla(0, 0%, 100%, .90); 
+}
+
+ul:hover .dropdown-background{
+  z-index: 0;
+  position: absolute;
+  margin: 0 auto;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 450px;
+  width: 100%;
+  background:  hsla(0, 0%, 100%, 0.90);
+}
+
+.brands-dropdown,
+.apparel-categories-dropdown {
+  width: 50%;
+  margin: 0 auto;
+  min-width: 500px; 
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+  line-height: 1rem;
+  text-align: center;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 8px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #161616;
+}
+
+ul li ul.brands-dropdown-content,
+ul li ul.apparel-categories-dropdown-content {
+  min-width: 100%; 
+  margin: 20px;
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  z-index: 101;
+  left: 0;
+}
+
+ul li:hover ul.brands-dropdown-content,
+ul li:hover ul.apparel-categories-dropdown-content {
+  display: flex; /* Display the dropdown */
+}
+
+ul li ul.brands-dropdown-content li,
+ul li ul.apparel-categories-dropdown-content li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+ul:hover li a{
+  color: #000;
+}
+
+ul:hover ul li a:hover {
+  color: rgb(179, 117, 60);
+}
+
+@media (max-width: 1050px) {
+  .brands-dropdown,
+  .apparel-categories-dropdown {
+    min-width: 380px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-dropdown,
+  .apparel-categories-dropdown {
+     min-width: 284px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .brands-dropdown,
+  .apparel-categories-dropdown {
+    min-width: 212px; 
+  }
+
+ @media (max-width: 425px) {
+    .brands-dropdown,
+    .apparel-categories-dropdown {
+    min-width: 187px; 
+  }
+}
+
+
+}

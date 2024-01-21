@@ -1,0 +1,19 @@
+<div class="container-payment">
+    <div class="p-b">
+      <h3 class="card-txt">Saisissez votre carte bancaire</h3>
+      <p class="payment-txt">Paiement sécurisé</p>
+    </div>
+    <form [formGroup]="paymentFormGroup" (ngSubmit)="onSubmit.emit()">
+  
+      <h3>Carte bancaire</h3>
+    
+      <div id="card-element">
+          <!-- a Stripe element will be inserted here -->
+      </div>
+    
+      <!-- submit button-->
+      <div class="text-center">
+        <button [ngStyle]="{'background-color': backgroundColor, 'color':fontColor}"  type="submit" mat-raised-button  [disabled]="!paymentFormGroup.valid">Purchase</button>
+      </div>
+    </form>
+</div>

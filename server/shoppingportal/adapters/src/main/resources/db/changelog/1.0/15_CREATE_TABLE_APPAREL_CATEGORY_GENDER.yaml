@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 15
+      author: cth
+      changes:
+        - createTable:
+            tableName: apparel_category_gender
+            columns:
+              - column:
+                  name: apparel_category_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: fk_apparel_category_gender_apparel_category
+                    references: apparel_category(id)
+              - column:
+                  name: gender_category_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: fk_apparel_category_gender_gender_category
+                    references: gender_category(id)

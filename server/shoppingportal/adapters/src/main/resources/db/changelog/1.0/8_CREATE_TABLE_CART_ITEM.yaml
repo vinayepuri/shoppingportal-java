@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8
+      author: cth
+      changes:
+        - createTable:
+            tableName: cart_item
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: int
+              - column:
+                  name: amount
+                  type: decimal(19, 2)
+              - column:
+                  name: product_id
+                  type: bigint
+              - column:
+                  name: cart_id
+                  type: bigint

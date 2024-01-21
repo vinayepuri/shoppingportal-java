@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 24
+      author: cth
+      changes:
+        - sqlFile:
+            encoding: utf8
+            endDelimiter: \nGO
+            path: sql/insert_country.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true

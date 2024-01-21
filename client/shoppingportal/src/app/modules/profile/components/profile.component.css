@@ -1,0 +1,27 @@
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  height: 100%;
+}
+
+mat-card {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 0.1px solid black;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 550;
+  margin: 10px;
+}
+
+button {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+}
